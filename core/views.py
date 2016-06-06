@@ -44,5 +44,6 @@ def sign(s):#签名加密方式
     return base64.b64encode(k.encrypt(s))
 def post(url, data):#封装post方法
     return urllib.request.urlopen(url, urllib.parse.urlencode(data).encode('utf-8')).read()
-
+def index(request):
+    return render(request,'index.html',locals())
 
